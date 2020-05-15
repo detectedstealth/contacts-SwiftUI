@@ -18,6 +18,8 @@
 		026D0AA8240C1F5200043EF9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D0AA7240C1F5200043EF9 /* Contact.swift */; };
 		026D0AAA240C27C400043EF9 /* ContactListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D0AA9240C27C400043EF9 /* ContactListRow.swift */; };
 		026D0AAD240C34E400043EF9 /* ContactDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D0AAC240C34E400043EF9 /* ContactDetailsView.swift */; };
+		02C71FD1246EE87A009F8F51 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C71FD0246EE87A009F8F51 /* AddContactView.swift */; };
+		02C71FD3246EEA2D009F8F51 /* RingTonesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C71FD2246EEA2D009F8F51 /* RingTonesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		026D0AA7240C1F5200043EF9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		026D0AA9240C27C400043EF9 /* ContactListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListRow.swift; sourceTree = "<group>"; };
 		026D0AAC240C34E400043EF9 /* ContactDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsView.swift; sourceTree = "<group>"; };
+		02C71FD0246EE87A009F8F51 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		02C71FD2246EEA2D009F8F51 /* RingTonesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingTonesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 				026D0A7A240C1CE000043EF9 /* ContactListView.swift */,
 				026D0AA9240C27C400043EF9 /* ContactListRow.swift */,
 				026D0AAC240C34E400043EF9 /* ContactDetailsView.swift */,
+				02C71FD0246EE87A009F8F51 /* AddContactView.swift */,
+				02C71FD2246EEA2D009F8F51 /* RingTonesListView.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -293,7 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				026D0AA8240C1F5200043EF9 /* Contact.swift in Sources */,
+				02C71FD1246EE87A009F8F51 /* AddContactView.swift in Sources */,
 				026D0A77240C1CE000043EF9 /* AppDelegate.swift in Sources */,
+				02C71FD3246EEA2D009F8F51 /* RingTonesListView.swift in Sources */,
 				026D0A79240C1CE000043EF9 /* SceneDelegate.swift in Sources */,
 				026D0A7B240C1CE000043EF9 /* ContactListView.swift in Sources */,
 				026D0AAD240C34E400043EF9 /* ContactDetailsView.swift in Sources */,

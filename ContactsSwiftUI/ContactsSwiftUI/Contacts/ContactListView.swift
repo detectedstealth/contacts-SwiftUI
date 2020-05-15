@@ -13,6 +13,7 @@ struct ContactListView: View {
     let store = CNContactStore()
     @State var contacts = [Contact]()
     @State var fetchedContacts = [Contact]()
+    @State var showaAddContactSheet = false
     
     var body: some View {
         NavigationView {
@@ -27,12 +28,17 @@ struct ContactListView: View {
             .navigationBarTitle("Contacts")
             .navigationBarItems(trailing:
                 HStack {
-                    Button(action: {}) {
+                    Button(action: {
+                        self.showaAddContactSheet.toggle()
+                    }) {
                         Image(systemName: "plus")
                     }
                     
                 }
             )
+            .sheet(isPresented: $showaAddContactSheet) {
+                AddContactView()
+            }
             .onAppear() {
                 print("Launced")
                 let authorizationStatus = CNContactStore.authorizationStatus(for: .contacts)
