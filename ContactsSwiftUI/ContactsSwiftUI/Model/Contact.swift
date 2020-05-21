@@ -9,9 +9,16 @@
 import SwiftUI
 import Contacts
 
-struct ContactPhoneNumber {
-    var label: String
+struct ContactPhoneNumber: Identifiable {
+    var id = UUID()
+    var label: PhoneNumberLabel
     var number: String
+}
+
+struct ContactEmail: Identifiable {
+    var id = UUID()
+    var label: EmailLabel
+    var email: String
 }
 
 class Contact: Identifiable {
@@ -71,7 +78,8 @@ class Contact: Identifiable {
             } else {
                 label = "No Label"
             }
-            numbers.append(ContactPhoneNumber(label: label, number: number))
+            print(label)
+            numbers.append(ContactPhoneNumber(label: PhoneNumberLabel(rawValue: label) ?? .other, number: number))
         }
         return numbers
     }

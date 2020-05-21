@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct AddContactView: View {
+    
+    @State var phoneNumbers: [ContactPhoneNumber] = []
+    @State var emails: [ContactEmail] = []
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -40,23 +44,9 @@ struct AddContactView: View {
                     Text("Last Name")
                     Text("Company")
                     
-                    Section(header: Text("")) {
-                        HStack {
-                            Image(systemName: "plus.circle.fill")
-                                .foregroundColor(.green)
-                            Text("add phone")
-                                .font(.subheadline)
-                        }
-                    }
+                    PhoneNumbersSelectionView(phoneNumbers: self.$phoneNumbers)
                     
-                    Section {
-                        HStack {
-                            Image(systemName: "plus.circle.fill")
-                                .foregroundColor(.green)
-                            Text("add email")
-                                .font(.subheadline)
-                        }
-                    }
+                    EmailsSelectionView(emails: self.$emails)
                     
                     Group {
                         Section(header: Text("")) {
@@ -157,5 +147,83 @@ struct AddContactView: View {
 struct AddContactView_Previews: PreviewProvider {
     static var previews: some View {
         AddContactView()
+    }
+}
+
+struct PhoneNumbersSelectionView: View {
+    @Binding var phoneNumbers: [ContactPhoneNumber]
+    
+    var body: some View {
+        Section(header: Text("")) {
+            ForEach(phoneNumbers) { phoneNumber in
+                HStack {
+                    Image(systemName: "minus.circle.fill")
+                        .foregroundColor(.red)
+                    NavigationLink(destination: SelectPhoneLabel()) {
+                        Text("home")
+                            .foregroundColor(.blue)
+                    }
+                    .frame(minWidth: 0, maxWidth: 100)
+                    Rectangle()
+                        .frame(width: 1, height: 30)
+                        .foregroundColor(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
+                    Spacer()
+                    Text("phone")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+            
+            Button(action: addPhone) {
+                HStack {
+                    Image(systemName: "plus.circle.fill")
+                        .foregroundColor(.green)
+                    Text("add phone")
+                        .font(.subheadline)
+                    
+                }
+            }
+        }
+    }
+    
+    func addPhone() {
+        self.phoneNumbers.append(ContactPhoneNumber(label: .home, number: ""))
+    }
+}
+
+struct EmailsSelectionView: View {
+    @Binding var emails: [ContactEmail]
+    
+    var body: some View {
+        Section(header: Text("")) {
+            ForEach(emails) { email in
+                HStack {
+                    Image(systemName: "minus.circle.fill")
+                        .foregroundColor(.red)
+                    NavigationLink(destination: SelectEmailLabel()) {
+                        Text("home")
+                            .foregroundColor(.blue)
+                    }
+                    .frame(minWidth: 0, maxWidth: 100)
+                    Rectangle()
+                        .frame(width: 1, height: 30)
+                        .foregroundColor(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
+                    Spacer()
+                    Text("email")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+            Button(action: addEmail) {
+                HStack {
+                    Image(systemName: "plus.circle.fill")
+                        .foregroundColor(.green)
+                    Text("add email")
+                        .font(.subheadline)
+                }
+            }
+        }
+    }
+    
+    func addEmail() {
+        self.emails.append(ContactEmail(label: .home, email: ""))
     }
 }

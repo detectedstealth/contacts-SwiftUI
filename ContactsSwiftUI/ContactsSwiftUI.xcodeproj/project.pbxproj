@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0203AA022470DB9100308BA4 /* SelectPhoneLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203AA012470DB9100308BA4 /* SelectPhoneLabel.swift */; };
+		0203AA042470DBA400308BA4 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203AA032470DBA400308BA4 /* Labels.swift */; };
+		0203AA062470DF5B00308BA4 /* SelectEmailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203AA052470DF5B00308BA4 /* SelectEmailLabel.swift */; };
 		026D0A77240C1CE000043EF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D0A76240C1CE000043EF9 /* AppDelegate.swift */; };
 		026D0A79240C1CE000043EF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D0A78240C1CE000043EF9 /* SceneDelegate.swift */; };
 		026D0A7B240C1CE000043EF9 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D0A7A240C1CE000043EF9 /* ContactListView.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0203AA012470DB9100308BA4 /* SelectPhoneLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPhoneLabel.swift; sourceTree = "<group>"; };
+		0203AA032470DBA400308BA4 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		0203AA052470DF5B00308BA4 /* SelectEmailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmailLabel.swift; sourceTree = "<group>"; };
 		026D0A73240C1CE000043EF9 /* ContactsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		026D0A76240C1CE000043EF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		026D0A78240C1CE000043EF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				026D0AA7240C1F5200043EF9 /* Contact.swift */,
+				0203AA032470DBA400308BA4 /* Labels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,7 +169,9 @@
 				026D0AA9240C27C400043EF9 /* ContactListRow.swift */,
 				026D0AAC240C34E400043EF9 /* ContactDetailsView.swift */,
 				02C71FD0246EE87A009F8F51 /* AddContactView.swift */,
+				0203AA012470DB9100308BA4 /* SelectPhoneLabel.swift */,
 				02C71FD2246EEA2D009F8F51 /* RingTonesListView.swift */,
+				0203AA052470DF5B00308BA4 /* SelectEmailLabel.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -302,7 +311,10 @@
 				02C71FD1246EE87A009F8F51 /* AddContactView.swift in Sources */,
 				026D0A77240C1CE000043EF9 /* AppDelegate.swift in Sources */,
 				02C71FD3246EEA2D009F8F51 /* RingTonesListView.swift in Sources */,
+				0203AA022470DB9100308BA4 /* SelectPhoneLabel.swift in Sources */,
 				026D0A79240C1CE000043EF9 /* SceneDelegate.swift in Sources */,
+				0203AA042470DBA400308BA4 /* Labels.swift in Sources */,
+				0203AA062470DF5B00308BA4 /* SelectEmailLabel.swift in Sources */,
 				026D0A7B240C1CE000043EF9 /* ContactListView.swift in Sources */,
 				026D0AAD240C34E400043EF9 /* ContactDetailsView.swift in Sources */,
 				026D0AAA240C27C400043EF9 /* ContactListRow.swift in Sources */,
